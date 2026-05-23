@@ -22,7 +22,18 @@ https://devpulse-api-assignment2.onrender.com
 - TypeScript Support
 
 ---
+---
 
+## Environment Variables
+
+Create a `.env` file:
+
+```env
+PORT=5000
+DATABASE_URL=your_database_url
+JWT_SECRET=devpulse_secret
+JWT_EXPIRES_IN=7d
+BCRYPT_SALT_ROUNDS=10
 ## Tech Stack
 
 - Node.js
@@ -35,7 +46,49 @@ https://devpulse-api-assignment2.onrender.com
 - Render
 
 ---
+## API Endpoints
 
+### Auth
+
+- POST `/api/auth/signup`
+- POST `/api/auth/login`
+
+### Issues
+
+- POST `/api/issues`
+- GET `/api/issues`
+- GET `/api/issues/:id`
+- PATCH `/api/issues/:id`
+- DELETE `/api/issues/:id`
+
+### Metrics
+
+- GET `/api/metrics`
+
+---
+
+## Database Schema
+
+### users
+
+- id
+- name
+- email
+- password
+- role
+- created_at
+- updated_at
+
+### issues
+
+- id
+- title
+- description
+- type
+- status
+- reporter_id
+- created_at
+- updated_at
 ## Setup Instructions
 
 ```bash
